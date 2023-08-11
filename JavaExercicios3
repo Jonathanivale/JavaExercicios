@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class ex3 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("digite 3 numeros:");
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int c = input.nextInt();
+
+
+        if(a > b && a > c){
+            System.out.println("O numero maior é A ="+a);
+
+        } else if (b > a && b > c) {
+            System.out.println("O numero maior é B ="+b);
+        }else{
+            System.out.println("O numero maior é C ="+c);
+        }
+    }
+}
