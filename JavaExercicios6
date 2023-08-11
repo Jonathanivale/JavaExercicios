@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ex6 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("digite um numero:");
+        int num1 = input.nextInt();
+        boolean istrue = true;
+
+        for(int i = 2;i <= num1 / 2 ; i++){
+            if(num1 % i ==0){
+                istrue = false;
+                break;
+            }
+
+
+    }
+        if(istrue){
+            System.out.println("O numero digitado é primo");
+        }else {
+            System.out.println("o numero nao é primo");
+        }
+}
+
+
+
+}
