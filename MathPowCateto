@@ -1,0 +1,18 @@
+package com.software;
+import javax.swing.JOptionPane;
+public class Ex2 {
+	public static void main(String[] args) {
+		
+		// Entrada de dados.
+		double Cateto1 = Double.parseDouble(JOptionPane.showInputDialog("Digite o primeiro Cateto: "));
+		double Cateto2 = Double.parseDouble(JOptionPane.showInputDialog("Digite o Segundo Cateto: "));
+		
+		// Calculo Matematico.
+		double Catetos = Math.pow(Cateto1,2) + Math.pow(Cateto2,2);
+		double Hipotenusa = Math.sqrt(Catetos);
+		
+		
+		// Exibicao da conversao.
+		System.out.println("Seu calculo é:" +(Hipotenusa));
+	}
+}
