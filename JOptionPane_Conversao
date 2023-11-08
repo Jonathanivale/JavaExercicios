@@ -1,0 +1,27 @@
+package com.software;
+import javax.swing.JOptionPane;
+public class ex1 {
+	public static void main(String[] args) {
+		
+		//Entrada de dados nome e notas.
+		String nome = JOptionPane.showInputDialog("Digite seu nome:");
+		double nota1 = Double.parseDouble(JOptionPane.showInputDialog("Digite um numero:"));
+		double nota2 = Double.parseDouble(JOptionPane.showInputDialog("Digite um numero:"));
+		double nota3 = Double.parseDouble(JOptionPane.showInputDialog("Digite um numero:"));
+		
+		//Faz a media das notas.
+		double media = (nota1 + nota2 + nota3) / 3 ;
+		
+		//Mostra na tela o nome e sua nota.
+		JOptionPane.showMessageDialog(null,"Olá " + nome + "Sua nota é " + media);
+		
+		// Fragmento 1
+		String inputString = JOptionPane.showInputDialog("??");
+		int input = Integer.parseInt(inputString);
+		input++;
+		System.out.println(input);
+		// Fragmento 2
+		int input1 = Integer.parseInt(JOptionPane.showInputDialog("??")) + 1;
+		System.out.println(input1);
+	}
+}
