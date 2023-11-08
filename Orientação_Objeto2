@@ -1,0 +1,12 @@
+package com.software.escola;
+//classe de driver
+public class Principal {
+	//metodo de execucao dos codigos
+	public static void main(String[] args) {
+	
+		//Cria um objeto da classe aluno
+		Aluno aluno1 = new Aluno(1,"Ezio",5,9,0,75);
+		
+		//Calcula a media do aluno.
+		double media = aluno1.calculaMedia();
+		int frequencia = aluno1.getFrequencia();
