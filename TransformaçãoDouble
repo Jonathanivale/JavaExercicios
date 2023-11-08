@@ -1,0 +1,29 @@
+package com.software;
+public class Parsing01 {
+	public static void main(String[] args) {
+		//Declaracao e inicializacao da vartiavel de preco da camiseta.
+		String camiseta = "10.50";
+		
+		//Declaracao e inicializacao do imposto.
+		String imposto = "1.10";
+		
+		//Declaracao e inicializacao do nome do cliente.
+		String nome = "alo" ;
+		
+		//Transformacao e exibicao do preco da camiseta e do imposto para double.
+		double valorCamiseta = Double.parseDouble(camiseta);
+		double imposto2 = Double.parseDouble(imposto);
+		
+		System.out.println("O valor da camiseta é: R$" + valorCamiseta);
+		System.out.println("O valor do imposto é: R$" + imposto2);
+		
+		double valorFinal = valorCamiseta +(valorCamiseta * imposto2);
+		
+		System.out.println("O valor final é:" + valorFinal);
+		
+		
+		//Tentativa transformcao e exibicao do nome do cliente para inteiro.
+		int nomeInt = Integer.parseInt("alo");
+		System.out.println(nomeInt);
+	}
+}
