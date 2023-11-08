@@ -1,0 +1,135 @@
+package com.software.inventario;
+public class Produto {
+	//atributos
+	private int numero;
+	
+	private String nome;
+	
+	private int estoque;
+	
+	private double preco;
+	
+	private boolean ativo;
+	
+	//Atributo da classe
+	private static int contagem =0;
+	
+	//metodo construtor padrao.
+	public Produto () {
+		this.setNumero(0);
+		this.setNome("");
+		this.setEstoque(0);
+		this.setPreco(0.0);
+		this.setAtivo(false);
+		contagem = getContagem() + 1;
+	}	
+		// metodo contrutor de 1 parametros
+		public Produto (int numero) {
+			this.setNumero(numero);
+			this.setNome("");
+			this.setEstoque(0);
+			this.setPreco(0.0);
+			this.setAtivo(false);
+			contagem = getContagem() + 1;
+			
+		 }
+	// metodo contrutor de 2 parametros
+	public Produto (int numero, String nome) {
+		this.setNumero(numero);
+		this.setNome(nome);
+		this.setEstoque(0);
+		this.setPreco(0.0);
+		this.setAtivo(false);
+		contagem = getContagem() + 1;
+		
+	 }
+	// metodo contrutor de 3 parametros
+	public Produto (int numero, String nome,int estoque) {
+		this.setNumero(numero);
+		this.setNome(nome);
+		this.setEstoque(estoque);
+		this.setPreco(0.0);
+		this.setAtivo(false);
+		contagem = getContagem() + 1;
+		
+	 }
+	// metodo contrutor de 4 parametros
+	public Produto (int numero,String nome,int estoque,double preco) {
+		this.setNumero(numero);
+		this.setNome(nome);
+		this.setEstoque(estoque);
+		this.setPreco(preco);
+		this.setAtivo(false);
+		contagem = getContagem() + 1;
+		
+	 }
+	
+	// metodo construtor com 5 parametros
+	public Produto(int numero,String nome, int estoque, double preco, boolean ativo) {
+		this.setNumero(numero);
+		this.setNome(nome);
+		this.setEstoque(estoque);
+		this.setPreco(preco);
+		this.setAtivo(ativo);
+		contagem = getContagem() + 1;
+	}
+	//metodo que retorna todos os campos
+	public String retornaDados() {
+		
+		String ativoFormatado = ativo ? "sim" : "Nao";
+		
+		return ("Numero do item:"+ numero +
+				"\n Nome:" + nome +
+				"\n Quantidade em Estoque:" + estoque +
+				"\n Preco unitario: "+ preco +
+				"\n Ativo:" + ativoFormatado);
+	}
+	//Método acessador do número
+	public int getNumero() {
+		return numero;
+	}
+	//Método modificador do número
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	//Método acesseador do nome
+	public String getNome() {
+		return nome;
+	}
+	//Metodo modificador do nome
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	//metodo acessador do estoque
+	public int getEstoque() {
+		return estoque;
+	}
+	//metodo modificador do estoque
+	public void setEstoque(int estoque) {
+		this.estoque = estoque;
+	}
+	//metodo acessador do preco
+	public double getPreco() {
+		return preco;
+	}
+	
+	//metodo modificador do preco
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+	
+	//Metodo acessador do ativo
+	public boolean getAtivo() {
+		return ativo;
+	}
+	
+	//Metodo modificador do ativo
+	public void setAtivo(boolean ativo) {
+		this.ativo = ativo;
+	}
+	//metodo acessador da contagem
+	public static int getContagem() {
+		return contagem;
+	}
+}
+	
