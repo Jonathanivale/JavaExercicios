@@ -1,0 +1,16 @@
+package com.software;
+import javax.swing.JOptionPane;
+public class ex3 {
+	public static void main(String[] args) {
+		
+		//Entrada de dados.
+		double Peso = Double.parseDouble(JOptionPane.showInputDialog("Digite seu Peso:"));
+		double Altura = Double.parseDouble(JOptionPane.showInputDialog("Digite sua altura:"));
+		
+		//Calculo do imc.
+		double IMC = Peso / (Altura * Altura);
+		
+		//Mostra o imc na tela.
+		JOptionPane.showMessageDialog(null,"Olá seu IMC é = " + IMC);
+	}
+}
