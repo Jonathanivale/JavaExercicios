@@ -1,0 +1,84 @@
+package com.software.escola;
+//Classe objeto.
+public class Aluno {
+	//Define os atributos da classe (caracteristicas).
+	private int matricula;
+	private String nome;
+	private double nota1;
+	private double nota2;
+	private double media;
+	private int frequencia;
+	
+	public Aluno(int matricula,String nome,double nota1,double nota2,double media,int frequencia) {
+		
+		this.matricula = matricula;
+		this.nome = nome;
+		this.nota1 = nota1;
+		this.nota2 = nota2;
+		this.media = media;
+		this.frequencia = frequencia;
+		
+		
+		
+		
+	}
+	//metodo que calcula a media.
+	
+	public double calculaMedia() {
+		return (nota1 + nota2 )/2;
+	}
+	// metodos acessadores e modificadores de atributos.
+	
+	public int getMatricula() {
+		return matricula;
+		
+	}
+	//metodo modificador da matricula
+	public void setMatricula(int matricula) {
+		this.matricula = matricula;
+	}
+	//metodo acessador do nome
+	public String getNome() {
+		return nome;
+		
+	}
+	//metodo modificador do nome
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+		
+	//metodo acessador da nota 1
+	public double getNota1() {
+		return nota1;
+	}
+	//metodo modificador da nota 1
+	public void setNota1(double nota1) {
+		this.nota1 = nota1;
+		
+	}
+	//metodo acessador da nota 2
+	public double getNota2() {
+		return nota2;
+	}		
+	//metodo modificador da nota 2
+	public void setNota2(double nota2) {
+		this.nota2 = nota2;
+	}
+	//metodo acessador de media
+	public double getMedia() {
+		return media;
+	}
+	//metodo modificador da media
+	public void setMedia(double media) {
+		this.media = media;
+	}
+	//metodo acessador da frequencia
+	public int getFrequencia() {
+		return frequencia;
+	}
+	//metodo modificador da frequencia
+	public void setFrequencia(int frequencia) {
+		this.frequencia = frequencia;
+	}
+	}
+	
