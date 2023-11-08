@@ -1,0 +1,39 @@
+package com.software;
+import javax.swing.JOptionPane;
+public class VerificaAcesso {
+	public static void main(String[] args) {
+		
+		// Solicita o e-mail do usuário.
+		String email = JOptionPane.showInputDialog("Digite seu email: ");
+		
+		
+		// Solicita a senha do usuário.
+		String senha = JOptionPane.showInputDialog("Digite sua senha: ");
+		
+		
+		// Verifica se o e-mail do usuário é igual a administrador@gmail.com.
+		if(email.equals("administrador@gmail.com")) {
+			
+			// Verifica se a senha é igual a 123456.
+			if (senha.equals("123456")){
+				
+				// caso a senha seja correta, apresenta uma mensagem de boas vindas.
+				JOptionPane.showMessageDialog(null,"Seja Bem Vindo!!!");
+				
+				
+			}else {
+				
+				// Caso seja falso, informa que os dados estao incorretos.
+				JOptionPane.showMessageDialog(null,"Suas informacoes nao conferem!!!");
+				
+			}
+			
+		}else {
+			
+			JOptionPane.showMessageDialog(null,"Informacoes incorretas!!!");
+		}
+		
+		}
+		
+		
+}
