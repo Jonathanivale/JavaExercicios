@@ -10,3 +10,16 @@ public class Principal {
 		//Calcula a media do aluno.
 		double media = aluno1.calculaMedia();
 		int frequencia = aluno1.getFrequencia();
+		
+		//verifica se ele esta aprovado ou reprovado.
+		if(media >=6 && frequencia >= 75) {
+			System.out.println("o aluno foi aprovado");
+		}else {
+			System.out.println("o aluno nao foi aprovado");
+		}
+		System.out.println(aluno1.calculaMedia());
+		
+		
+		
+		
+	}
