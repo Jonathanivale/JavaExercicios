@@ -1,0 +1,17 @@
+package com.software;
+public class CarrinhoCompras {
+	public static void main(String[] args) {
+		// Variaveis com informacoes do usuario.
+		String nomeCompleto ="El pajaro";
+		// Retorna a posicao do espaco na string.
+		int indiceEspaco = nomeCompleto.indexOf(" ");
+		
+		// Cria uma Substring contendo somente o primeiro nome.
+		String primeiroNome = nomeCompleto.substring(0,indiceEspaco);
+		
+		// Exibe o conteudo criado.
+		System.out.println("Nome Completo: " + nomeCompleto);
+		System.out.println("Primeiro Nome: " + primeiroNome);
+		
+	}
+}
