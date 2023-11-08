@@ -1,0 +1,24 @@
+package com.software;
+public class Casting02 {
+	public static void main(String[] args) {
+		
+		//Populacao mundial hoje.
+		
+		long pessoasMundoHoje = 7_000_000_000L;
+		System.out.println("Populacao mundial hoje: " + pessoasMundoHoje);
+		
+		//Populacao mundial em 1950.
+		int africa = 221_000_000;
+		int asia = 1_402_000_000;
+		int europa = 547_000_000;
+		int america = 339_000_000;
+		int oceania = 13_000_000;
+		System.out.println("Populacao mundial em 1950" + (africa + (long)asia + europa + america + oceania));
+		
+		//populacao atual da asia em porcentagem.
+		double percentualAsia = 0.6;
+		
+		double asiaAtualmente = pessoasMundoHoje * percentualAsia;
+		System.out.println("Populacao atual da asia hoje:" + (long)asiaAtualmente);
+	}
+}
