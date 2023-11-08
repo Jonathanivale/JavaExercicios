@@ -1,0 +1,45 @@
+package com.software.matrizes;
+import java.util.Scanner;
+public class PrincipalTres {
+	public static void main(String[] args) {
+		
+		// Declara o Scanner
+		Scanner ler = new Scanner(System.in);
+		
+		//quantidade de linhas do vetor
+		System.out.print("Digite a quantidade de linhas:");
+		
+		//
+		int linhas = ler.nextInt();
+		
+		System.out.print("Digite a quantidade de colunas");
+		
+		int colunas = ler.nextInt();
+		
+		//Declara o array
+		String[][] frutas = new String[linhas][colunas];
+		
+		//Percorre as linhas do array
+		for(int contadorLinha = 0;contadorLinha < linhas;contadorLinha++) {
+			
+			//percore as colunas do array
+			for(int contadorColuna=0; contadorColuna < colunas; contadorColuna++) {
+				
+				System.out.print("digite o conteudo da linha"+ contadorLinha + " e coluna"+ contadorColuna +":");
+				frutas[contadorLinha][contadorColuna] = ler.next();
+			
+			
+		}
+		}
+			for(int contadorLinha =0;contadorLinha < linhas; contadorLinha++) {
+				
+				for(int contadorColuna=0; contadorColuna < colunas; contadorColuna++) {
+					System.out.println("Conteudo da linha" + contadorLinha + "coluna" + contadorColuna+ ":" + frutas[contadorLinha][contadorColuna]);
+					
+				}
+				
+			}
+		
+		
+	}
+}
