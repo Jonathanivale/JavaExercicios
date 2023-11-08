@@ -1,0 +1,26 @@
+package com.software;
+import java.util.Random;
+import javax.swing.JOptionPane;
+public class Ex3 {
+	public static void main(String[] args) {
+		
+		// Solicita a mensagem para o usuario jogar os dados.
+		JOptionPane.showMessageDialog(null,"Jogue o primeiro dado: ");
+		JOptionPane.showMessageDialog(null,"Jogue o segundo dado: ");
+		
+		
+		// Faz o random dos dados.
+		Random aleatorio = new Random();
+		int dado1 = aleatorio.nextInt(6) + 1;
+		int dado2 = aleatorio.nextInt(6) + 1;
+		
+		// Faz soma dos dados 1 e 2.
+		int somaDado = dado1 + dado2;
+		
+		// Mostra os dados os numeros.
+		JOptionPane.showMessageDialog(null,"O primeiro dado deu: "+dado1);
+		JOptionPane.showMessageDialog(null,"O segundo dado deu: "+ dado2);
+		JOptionPane.showMessageDialog(null,"As Casas andadas: "+ somaDado);
+		
+	}
+}
