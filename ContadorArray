@@ -1,0 +1,34 @@
+package com.software.matrizes;
+import java.util.Scanner;
+public class PrincipalDois {
+	public static void main(String[] args) {
+		
+		//declara um novo Scanner
+		Scanner ler = new Scanner(System.in);
+		
+		//define o tamanho do array a ser criado.
+		System.out.print("Digite o tamanho do array:");
+		
+		int tamanho = ler.nextInt();
+		
+		//cria o array com o tamanho definido anteriormente
+		String[] frutas= new String[tamanho];
+		
+		//laco de repeticao que inicializa os valores do array
+		for(int contador = 0;contador < tamanho;contador++){
+			
+			//armazena o valor digitado no vetor
+			System.out.print("Digite o valor da posicao"+ contador + ":");
+			frutas[contador] = ler.nextLine();
+			
+			
+			
+		}
+		//laco de repeticao que apresentar os valores do array
+		for(int contador=0; contador < tamanho; contador++) {
+			
+			System.out.println("O valor da posicao"+ contador + "é"+frutas[contador]);
+			
+		}
+	}
+}
