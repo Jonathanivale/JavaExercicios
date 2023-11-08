@@ -1,0 +1,31 @@
+package com.software;
+import java.util.Scanner;
+public class input03 {
+	public static void main(String[] args) {
+		
+		//cria um objeto scanner.
+		Scanner ler = new Scanner(System.in);
+		
+		//solicita o nome do aluno.
+		System.out.println("Digite seu nome:");
+		String nome = ler.nextLine();
+		
+		//solicita a nota 1 do aluno.
+		System.out.println("Digite sua nota 1:");
+
+
+		double nota1 = ler.nextDouble();
+		
+		//solicita a nota 2 do aluno.
+		System.out.println("Digite sua nota 2:");
+		double nota2 = ler.nextDouble();
+		
+		//faz o calculo matematico e mostra na tela.
+		double media = (nota1 + nota2) / 2;
+		System.out.println("Sua nota é="+media);
+		
+		//Encerramento do método Scanner.
+		ler.close();
+		
+	}
+}
