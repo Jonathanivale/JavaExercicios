@@ -1,0 +1,19 @@
+package com.software;
+import javax.swing.JOptionPane;
+public class CriadorNome {
+	public static void main(String[] args) {
+		
+		// Captura informacao do usuario.
+		String primeiroNome = JOptionPane.showInputDialog("Digite o seu nome: ");
+		
+		String nomeMeio = JOptionPane.showInputDialog("Digite o seu nome do meio");
+		
+		String ultimoNome = JOptionPane.showInputDialog("digite o seu sobrenome: ");
+		
+		// Monta o nome do usuario.
+		String nomeCompleto = primeiroNome +" "+ nomeMeio + " " + ultimoNome;
+		
+		// Exibe o nome completo do usuario.
+		JOptionPane.showMessageDialog(null,nomeCompleto);
+	}
+}
