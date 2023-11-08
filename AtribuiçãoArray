@@ -1,0 +1,22 @@
+package com.software.matrizes;
+public class Principal {
+	public static void main(String[] args) {
+		// declaracao array unidimensional
+		String[] frutas = new String[5];
+		
+		//Inicializacao literal dos valores
+		
+		frutas[0] = "Banana";
+		frutas[1] = "Maca";
+		frutas[2] = "geleia";
+		frutas[3] = "carne";
+		frutas[4] = "tamandua";
+		
+		System.out.println(frutas[0]);
+		System.out.println(frutas[1]);
+		System.out.println(frutas[2]);
+		System.out.println(frutas[3]);
+		System.out.println(frutas[4]);
+	}
+	
+}
