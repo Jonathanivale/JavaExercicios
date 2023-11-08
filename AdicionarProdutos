@@ -1,0 +1,51 @@
+package com.software.inventario;
+//importacao metodo scanner
+import java.util.Scanner;
+public class Principal {
+	
+	//metodo que executa os codigos para o usuario.
+	public static void main(String[] args) {
+		
+		//cria um objeto scanner
+		Scanner ler = new Scanner(System.in);
+		
+		//estrutura de tratamento de excecoes
+		try {
+			
+			//Variavel de controle
+			String continuar = "S";
+			
+			//Laco de repeticao
+			while (continuar.equals("S")) {
+				
+				//O usuario informa o numero
+				System.out.println("Digite o codigo de barras do produto:");
+				int numero = ler.nextInt();
+				ler.nextLine();
+				
+				//o usuario informa o nome do produto
+				System.out.print("Digite o nome do produto:");
+				String nome = ler.next();
+				ler.nextLine();
+				
+				//o usuario informa o estoque do produto
+				System.out.print("Digite a quantidade em estoque do produto:");
+				int estoque = ler.nextInt();
+				ler.nextLine();
+				
+				//o usuario informa o preco do produto
+				System.out.print("Digite o preco do produto:");
+				double preco = ler.nextDouble();
+				ler.nextLine();
+				
+				//o usuario informa o preco do produto
+				System.out.print("Digite o ativo do produto:");
+				String ativo = ler.next();
+				ler.nextLine();
+				
+				//Faz um tratamento para o campo ativo
+				boolean ativoTratado = (ativo.equals("Sim")) ? true : false;
+				ler.nextLine();
+				
+				//cria uma instancia de objeto
+				Produto p1 = new Produto(numero,nome,estoque,preco,ativoTratado);
