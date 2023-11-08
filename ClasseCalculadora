@@ -1,0 +1,60 @@
+package com.software;
+public class NovaCalculadora {
+	
+	// Propriedades da classe nova calculadora.
+	public double taxa = 0.05;
+	public double gorjeta = 0.15;
+	
+	
+	// Método que calcula o valor total.
+	public double calculaTotal(double valorInicial) {
+		
+		// Calcula o valor total baseado no valor inicial + taxa + gorjeta.
+		double valorT = valorInicial * (1 + taxa + gorjeta);
+		
+		// Retorna o valor total.
+		return valorT;
+	}
+}
+
+
+package com.software;
+public class Principal {
+	
+	// Metodo que executa os codigos das classes de objetos.
+	public static void main(String[] args) {
+		
+		// Instancia da classe nova calculadora.
+		
+		NovaCalculadora calculadora = new NovaCalculadora();
+		
+		// Calcula e exibe o valor total gasto por cada pessoa.
+		double pessoa1 = calculadora.calculaTotal(10);
+		double pessoa2 = calculadora.calculaTotal(12);
+		double pessoa3 = calculadora.calculaTotal(9);
+		double pessoa4 = calculadora.calculaTotal(8);
+		double pessoa5 = calculadora.calculaTotal(7);
+		double pessoa6 = calculadora.calculaTotal(15);
+		double pessoa7 = calculadora.calculaTotal(11);
+		double pessoa8 = calculadora.calculaTotal(30);
+		
+		// Calcula o total da mesa.
+		double totalMesa = pessoa1 + pessoa2 + pessoa3 + pessoa4 +
+						 pessoa5 + pessoa6+ pessoa7 + pessoa8;
+		
+		// Exibe o valor gasto por pessoa.
+		System.out.println("Pessoa 1: R$" + pessoa1);
+		System.out.println("Pessoa 2: R$" + pessoa2);
+		System.out.println("Pessoa 3: R$" + pessoa3);
+		System.out.println("Pessoa 4: R$" + pessoa4);
+		System.out.println("Pessoa 5: R$" + pessoa5);
+		System.out.println("Pessoa 6: R$" + pessoa6);
+		System.out.println("Pessoa 7: R$" + pessoa7);
+		System.out.println("Pessoa 8: R$" + pessoa8);
+	
+		
+		// Exibe o valor gasto por pessoa e o total da mesa.
+		System.out.println(totalMesa);
+	
+	}
+}
