@@ -1,0 +1,36 @@
+package com.software;
+import javax.swing.JOptionPane;
+public class Media {
+	public static void main(String[] args) {
+		
+		// Solicita o nome do aluno.
+		String nome = JOptionPane.showInputDialog("Digite seu nome: ");
+		
+		// Solicita a nota 1 do aluno.
+		String nota1 = JOptionPane.showInputDialog("Digite a nota 1: ");
+		
+		// Solicita a nota 2 do aluno.
+		String nota2 = JOptionPane.showInputDialog("Digite a nota 2: ");
+		
+		// Conversao para double.
+		double nota01 = Double.parseDouble(nota1);
+		double nota02 = Double.parseDouble(nota2);
+		
+		
+		// Faz o calculo da media das notas.
+		double media = (nota01 + nota02) / 2;
+		
+		
+		// Verifica se o aluno foi aprovado ou reprovado.
+		
+		if (media >= 7) {
+		
+		// Mostra na tela.
+		JOptionPane.showMessageDialog(null,"ola "+ nome +" voce foi aprovado!!! " + media);
+	}	else {
+		
+		// Mostra na tela.
+		JOptionPane.showMessageDialog(null,"ola "+ nome +" voce foi reprovado!!! " + media);
+	}
+	}
+}
