@@ -1,0 +1,84 @@
+package com.software;
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+public class Login extends Application {
+	
+	// Janela principal da interface grafica.
+	@Override
+	public void start (Stage primaryStage) {
+		
+		// Cria um rotulo e um campo de entrada de e-mail.
+		Label emailLabel = new Label("E-mail:");
+		TextField emailInput = new TextField();
+		
+		
+		// Cria um rotulo e um campo de entrada de senha.
+		Label senhaLabel = new Label("Senha:");
+		PasswordField senhaInput = new PasswordField();
+		
+		// Cria um botao para validar as informacoes.
+		Button loginButton = new Button("Entrar");
+		
+		// Metodo que responde ao evento de clique no botao de login.
+		loginButton.setOnAction(e -> {
+			
+			// Recupera as informacoes digitadas pelo usuario.
+			String email = emailInput.getText();
+			String senha = senhaInput.getText();
+			
+			// Verifica se as informacoes estao corretadas.
+			if (email.equals("administrador@email.com") && senha.equals("123456")) {
+				
+				// Mensagem informando o sucesso da operacao.
+				Alert alert = new Alert (Alert.AlertType.INFORMATION);
+				alert.setHeaderText("Autenticacao do usuario.");
+				alert.setContentText("Seja bem-vindo!!!");
+				alert.showAndWait();
+				
+			} else {
+				
+				// Mensagem informando o fracasso da operacao.
+				Alert alert = new Alert (Alert.AlertType.INFORMATION);
+				alert.setHeaderText("Autenticacao do usuario.");
+				alert.setContentText("Suas informacoes nao estao corretas.");
+				alert.showAndWait();
+				
+			}});
+			
+			// Cria uma caixa para organizar os componentes graficos verticalmente.
+			VBox emailBox = new VBox(5, emailLabel, emailInput);
+			VBox senhaBox = new VBox(5, senhaLabel, senhaInput);
+			
+			// Define as margens laterais das caixa verticais.
+			VBox.setMargin(emailBox, new Insets(0,10,0,10));
+			VBox.setMargin(senhaBox, new Insets(0,10,0,10));
+			VBox.setMargin(loginButton, new Insets(0,10,0,10));
+			
+			// Cria o nó raiz, que define a ordem dos componentes gráficos.
+			VBox root = new VBox(10, emailBox, senhaBox, loginButton);
+			
+		
+		
+		// Cria a cena (conteiner com os componentes gráficos).
+		Scene scene = new Scene(root, 300, 200);
+		primaryStage.setTitle("Autenticacao de Usuario");
+		primaryStage.setScene(scene);
+		primaryStage.show();
+		
+	}
+	
+	// Método que executa os códigos.
+	public static void main (String[] args) {
+		
+		// Inicializa o software usando o java FX.
+		launch(args);
+	}
+}
